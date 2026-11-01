@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | The Glow Edit</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, serif;
+    background-color: #F5F1E9;
+    color: #294034;
+    margin: 0;
+}
+header {
+    background-color: #294034;
+    color: #F5F1E9;
+    text-align: center;
+    padding: 30px;
+}
+header h1 {
+    font-size: 38px;
+}
+header p {
+    color: #D8B477;
+    font-style: italic;
+}
+nav {
+    background-color: #9B552F;
+    text-align: center;
+    padding: 14px;
+}
+nav a {
+    color: #F5F1E9;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+.form-container {
+    max-width: 650px;
+    margin: 45px auto;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border: 2px solid #D8B477;
+    border-radius: 18px;
+}
+h2 {
+    color: #294034;
+    text-align: center;
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    color: #294034;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #BBA58B;
+    border-radius: 8px;
+    background-color: #F5F1E9;
+    color: #294034;
+    font-family: Georgia, serif;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #D8B477;
+    border-color: #9B552F;
+}
+input:required,
+select:required,
+textarea:required {
+    border-left: 5px solid #9B552F;
+}
+input:valid,
+textarea:valid {
+    border-color: #557A55;
+}
+input:invalid {
+    border-color: #B85C5C;
+}
+.checkbox-group {
+    margin-top: 18px;
+}
+.checkbox-group input {
+    width: auto;
+    margin-right: 8px;
+}
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background-color: #9B552F;
+    color: #F5F1E9;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #9B552F;
+    font-weight: bold;
+}
+footer {
+    background-color: #294034;
+    color: #F5F1E9;
+    text-align: center;
+    padding: 25px;
+}
+footer h2 {
+    color: #D8B477;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>The Glow Edit</h1>
+    <p>Your Beauty Companion</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#routine">Routine</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+<div class="form-container">
+    <h2>Join The Glow Community</h2>
+    <form action="#" method="post">
+        <label for="fullname">Full Name</label>
+        <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your full name"
+            required
+        >
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            minlength="6"
+            required
+        >
+        <label for="organization">Skin Type</label>
+        <select id="organization" name="organization" required>
+            <option value="">Select your skin type</option>
+            <option value="oily">Oily</option>
+            <option value="dry">Dry</option>
+            <option value="combination">Combination</option>
+            <option value="normal">Normal</option>
+            <option value="sensitive">Sensitive</option>
+        </select>
+        <label for="experience">Skincare Experience</label>
+        <select id="experience" name="experience" required>
+            <option value="">Select your experience</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <label>Areas of Interest</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="skincare" name="interest" value="skincare">
+            <label for="skincare">Skincare</label>
+            <input type="checkbox" id="haircare" name="interest" value="haircare">
+            <label for="haircare">Haircare</label>
+            <input type="checkbox" id="makeup" name="interest" value="makeup">
+            <label for="makeup">Makeup</label>
+        </div>
+        <label for="message">Your Message</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Share your beauty interests..."
+            required
+        ></textarea>
+        <div class="checkbox-group">
+            <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+            >
+            <label for="newsletter">
+                Subscribe to our newsletter
+            </label>
+        </div>
+        <button type="submit">Register Now</button>
+    </form>
+    <a href="index.html" class="back-link">
+        Back to The Glow Edit
+    </a>
+</div>
+<footer>
+    <h2>The Glow Edit</h2>
+    <p>Glow Naturally • Shine Beautifully</p>
+    <p>&copy; 2026 The Glow Edit | All Rights Reserved.</p>
+</footer>
+</body>
+</html>

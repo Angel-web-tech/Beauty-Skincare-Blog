@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glow Edit | Beauty & Skincare</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #F5F1E9;
+    color: #294034;
+    line-height: 1.7;
+}
+
+header {
+    background-color: #294034;
+    color: #F5F1E9;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #D8B477;
+    font-style: italic;
+}
+
+nav {
+    background-color: #9B552F;
+    text-align: center;
+    padding: 14px;
+}
+
+nav a {
+    color: #F5F1E9;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #D8B477;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+h2 {
+    color: #294034;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #9B552F;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* 1. ROUNDED CORNERS */
+
+.hero-content,
+.about-box,
+.glossary-card,
+.routine-card,
+.essential-card,
+.contact-box,
+.membership-box,
+.planner-box {
+    border-radius: 18px;
+}
+
+.hero-content {
+    padding: 90px 25px;
+    text-align: center;
+    color: #F5F1E9;
+
+    /* 3. MULTIPLE BACKGROUNDS */
+    background-image:
+        linear-gradient(rgba(41, 64, 52, 0.78),
+        rgba(41, 64, 52, 0.78)),
+        url("hero.jpg");
+
+    /* 4. BACKGROUND SIZE */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h2 {
+    color: #F5F1E9;
+    font-size: 40px;
+}
+
+.hero-content p {
+    color: #F5F1E9;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #9B552F;
+    color: #F5F1E9;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* PSEUDO-CLASS :HOVER */
+
+.button:hover {
+    background-color: #294034;
+    color: #D8B477;
+}
+
+.about-box {
+    background-color: #E9DFD0;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-box img {
+    width: 40%;
+    border-radius: 15px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.glossary-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.glossary-card {
+    background-color: #FFFFFF;
+    border: 2px solid #D8B477;
+    padding: 25px;
+    width: 30%;
+    min-width: 220px;
+    text-align: center;
+}
+
+.glossary-card h3 {
+    color: #294034;
+}
+
+.routine-banner {
+    color: #F5F1E9;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 18px;
+
+    /* 3. MULTIPLE BACKGROUNDS */
+    background-image:
+        linear-gradient(rgba(41, 64, 52, 0.72),
+        rgba(41, 64, 52, 0.72)),
+        url("routine.jpg");
+
+    /* 4. BACKGROUND SIZE */
+    background-size: cover;
+    background-position: center;
+}
+
+.routine-banner h2 {
+    color: #F5F1E9;
+}
+
+.routine-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.routine-card {
+    background-color: #E9DFD0;
+    padding: 25px;
+    flex: 1;
+    min-width: 240px;
+    border-left: 6px solid #9B552F;
+}
+
+.routine-card ul {
+    padding-left: 20px;
+}
+
+.essential-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.essential-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D8B477;
+    padding: 20px;
+    width: 30%;
+    min-width: 220px;
+    text-align: center;
+}
+
+.essential-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.item-name {
+    color: #294034;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+/* 6. ADJACENT SIBLING SELECTOR */
+
+.item-name + .item-description {
+    color: #9B552F;
+    font-style: italic;
+    border-top: 1px solid #D8B477;
+    padding-top: 8px;
+}
+
+/* 2. BORDER IMAGE */
+
+.membership-box {
+    background-color: #294034;
+    color: #F5F1E9;
+    padding: 35px;
+    text-align: center;
+    border: 15px solid transparent;
+    border-image: url("border.png") 30 round;
+}
+
+.membership-box h2 {
+    color: #D8B477;
+}
+
+.membership-box p {
+    color: #F5F1E9;
+}
+
+.planner-box {
+    background-color: #FFFFFF;
+    padding: 25px;
+    overflow-x: auto;
+}
+
+.planner-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.planner-table th {
+    background-color: #294034;
+    color: #F5F1E9;
+    padding: 14px;
+}
+
+.planner-table td {
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #D8B477;
+}
+
+/* 7. NTH-CHILD SELECTOR */
+
+.planner-table tr:nth-child(odd) {
+    background-color: #F5F1E9;
+}
+
+.planner-table tr:nth-child(even) {
+    background-color: #E9DFD0;
+}
+
+/* PSEUDO-CLASS :HOVER */
+
+.planner-table tr:hover {
+    background-color: #D8B477;
+}
+
+.contact-box {
+    background-color: #E9DFD0;
+    padding: 35px;
+    text-align: center;
+}
+
+.contact-box a {
+    color: #9B552F;
+    font-weight: bold;
+}
+
+.contact-box .button {
+    color: #F5F1E9;
+}
+
+.contact-box .button:hover {
+    color: #D8B477;
+}
+
+footer {
+    background-color: #294034;
+    color: #F5F1E9;
+    text-align: center;
+    padding: 30px;
+}
+
+footer h2 {
+    color: #D8B477;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    .about-box img {
+        width: 100%;
+    }
+
+    .glossary-card,
+    .essential-card {
+        width: 100%;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .routine-container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Glow Edit</h1>
+    <p>Your Beauty Companion</p>
+    <p>Glow Naturally • Shine Beautifully</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#glossary">Glossary</a>
+    <a href="#routine">Routine</a>
+    <a href="#essentials">Essentials</a>
+    <a href="#planner">Planner</a>
+    <a href="#contact">Contact</a>
+    <a href="experiment6.html">Task Tracker</a>
+</nav>
+
+<main>
+
+<section id="home">
+    <div class="hero-content">
+        <h2>Discover Your Natural Glow</h2>
+        <p>
+            Simple skincare knowledge, thoughtful routines,
+            and beauty tips for everyday confidence.
+        </p>
+        <a href="#about" class="button">Explore More</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About The Glow Edit</h2>
+
+    <div class="about-box">
+        <img src="story.jpg" alt="Beauty skincare products">
+
+        <div class="about-text">
+            <h3>Beauty Begins With Care</h3>
+            <p>
+                The Glow Edit is a beauty and skincare blog
+                created to make skincare simple and enjoyable.
+            </p>
+            <p>
+                Learn about skincare ingredients, daily routines,
+                beauty essentials, and healthy skin habits.
+            </p>
+            <p>
+                Our goal is to help you glow naturally
+                and feel confident in your own skin.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="glossary">
+    <h2>Skincare Glossary</h2>
+
+    <div class="glossary-container">
+
+        <div class="glossary-card">
+            <h3>Hydration</h3>
+            <p>Adding water to the skin to keep it soft, fresh, and comfortable.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Exfoliation</h3>
+            <p>Removing dead skin cells from the surface of the skin.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Antioxidants</h3>
+            <p>Ingredients that help protect skin from environmental stress.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Moisturizer</h3>
+            <p>A skincare product that helps maintain the skin's moisture barrier.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Sunscreen</h3>
+            <p>A product that protects skin from harmful ultraviolet radiation.</p>
+        </div>
+
+        <div class="glossary-card">
+            <h3>Serum</h3>
+            <p>A lightweight product containing concentrated skincare ingredients.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="routine">
+    <div class="routine-banner">
+        <h2>Build Your Daily Routine</h2>
+        <p>
+            Consistency is the key to simple and effective skincare.
+        </p>
+    </div>
+
+    <div class="routine-container">
+
+        <div class="routine-card">
+            <h3>Morning Routine</h3>
+            <ul>
+                <li>Gentle cleanser</li>
+                <li>Hydrating serum</li>
+                <li>Moisturizer</li>
+                <li>Sunscreen</li>
+            </ul>
+        </div>
+
+        <div class="routine-card">
+            <h3>Night Routine</h3>
+            <ul>
+                <li>Cleanser</li>
+                <li>Face serum</li>
+                <li>Moisturizer</li>
+                <li>Lip care</li>
+            </ul>
+        </div>
+
+        <div class="routine-card">
+            <h3>Weekly Care</h3>
+            <ul>
+                <li>Gentle exfoliation</li>
+                <li>Face mask</li>
+                <li>Hair care</li>
+                <li>Relaxation time</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="essentials">
+    <h2>Beauty Essentials</h2>
+
+    <div class="essential-container">
+
+        <div class="essential-card">
+            <img src="skincare.jpg" alt="Skincare products">
+            <h3 class="item-name">Skincare</h3>
+            <p class="item-description">
+                Cleanser, moisturizer, and sunscreen for everyday skin care.
+            </p>
+        </div>
+
+        <div class="essential-card">
+            <img src="haircare.jpg" alt="Haircare products">
+            <h3 class="item-name">Haircare</h3>
+            <p class="item-description">
+                Gentle products for soft, healthy-looking hair.
+            </p>
+        </div>
+
+        <div class="essential-card">
+            <img src="makeup.jpg" alt="Makeup products">
+            <h3 class="item-name">Makeup</h3>
+            <p class="item-description">
+                Simple makeup essentials for a natural everyday look.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="membership">
+    <div class="membership-box">
+        <h2>Join The Glow Community</h2>
+        <p>
+            Receive skincare tips, beauty ideas,
+            and weekly self-care inspiration.
+        </p>
+        <a href="advanced-ccs3%20form.html" class="button">Register Now</a>
+    </div>
+</section>
+
+<section id="planner">
+    <h2>Weekly Skincare Planner</h2>
+
+    <div class="planner-box">
+        <table class="planner-table">
+            <tr>
+                <th>Day</th>
+                <th>Morning</th>
+                <th>Night</th>
+            </tr>
+
+            <tr>
+                <td>Monday</td>
+                <td>Cleanser + Sunscreen</td>
+                <td>Cleanser + Moisturizer</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td>Hydration + Sunscreen</td>
+                <td>Serum + Moisturizer</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td>Cleanser + Sunscreen</td>
+                <td>Face Mask + Moisturizer</td>
+            </tr>
+
+            <tr>
+                <td>Thursday</td>
+                <td>Hydration + Sunscreen</td>
+                <td>Cleanser + Serum</td>
+            </tr>
+
+            <tr>
+                <td>Friday</td>
+                <td>Cleanser + Sunscreen</td>
+                <td>Moisturizer + Lip Care</td>
+            </tr>
+
+            <tr>
+                <td>Saturday</td>
+                <td>Gentle Skincare</td>
+                <td>Self-care Routine</td>
+            </tr>
+
+            <tr>
+                <td>Sunday</td>
+                <td>Basic Skincare</td>
+                <td>Rest and Recovery</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <h3>Let's Connect</h3>
+
+        <p>
+            Have questions or beauty suggestions?
+            We would love to hear from you.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:glowedit@example.com">
+                glowedit@example.com
+            </a>
+        </p>
+
+        <a href="mailto:glowedit@example.com" class="button">
+            Send Us an Email
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <h2>The Glow Edit</h2>
+    <p><i>Your Beauty Companion</i></p>
+    <p>Glow Naturally • Shine Beautifully</p>
+    <p>&copy; 2026 The Glow Edit | All Rights Reserved.</p>
+    <p><a href="#home" style="color:#D8B477;">Back to Top</a></p>
+</footer>
+
+</body>
+</html>
