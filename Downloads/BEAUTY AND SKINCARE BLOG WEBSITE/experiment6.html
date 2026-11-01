@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glow Edit | Beauty Task Tracker</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F1E9;
+    color: #2D3C34;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #294034;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #E9DFD0;
+}
+
+/* Navigation */
+nav {
+    background-color: #9B552F;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #D8B477;
+}
+
+/* Main section */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #FFFAF5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #9B552F;
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Task form */
+h3 {
+    color: #294034;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+#taskForm {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #B98268;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+#taskInput:focus {
+    outline: 2px solid #D8B477;
+    border-color: #9B552F;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #9B552F;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #294034;
+}
+
+/* Filter buttons */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.filters button {
+    background-color: #E9DFD0;
+    color: #294034;
+    border: 1px solid #B98268;
+}
+
+.filters button.active,
+.filters button:hover {
+    background-color: #294034;
+    color: white;
+}
+
+/* Task list */
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background-color: #F5F1E9;
+    border-left: 5px solid #9B552F;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed {
+    border-left-color: #294034;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 9px 13px;
+}
+
+.task-actions button:first-child {
+    background-color: #294034;
+}
+
+.task-actions button:last-child {
+    background-color: #9B552F;
+}
+
+.counter {
+    text-align: center;
+    margin-top: 22px;
+    color: #294034;
+    font-weight: bold;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #294034;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 22px;
+    }
+
+    #taskForm {
+        flex-direction: column;
+    }
+
+    #taskForm button {
+        width: 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .filters {
+        gap: 7px;
+    }
+
+    .filters button {
+        padding: 10px 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header id="home">
+    <h1>THE GLOW EDIT</h1>
+    <p>Your Beauty Companion</p>
+    <p>Glow Naturally • Shine Beautifully</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="advanced-css3.html">Home</a>
+    <a href="#tracker">Task Tracker</a>
+</nav>
+
+<!-- Main Content -->
+<main>
+
+<section id="tracker">
+    <div class="container">
+
+        <h2>Beauty Routine Task Tracker</h2>
+
+        <p class="intro">
+            Organize your daily skincare and beauty routine.
+            Add your tasks, mark them as completed and stay consistent
+            with your beauty goals!
+        </p>
+
+        <h3>My Beauty Tasks</h3>
+
+        <!-- Task Form -->
+        <form id="taskForm">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your beauty task..."
+                required
+            >
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Task Filters -->
+        <div class="filters">
+            <button type="button" class="active" data-filter="all">All</button>
+            <button type="button" data-filter="open">Open</button>
+            <button type="button" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Remaining Task Count -->
+        <p id="counter" class="counter"></p>
+
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 The Glow Edit | Beauty & Skincare Blog</p>
+    <p>Glow Naturally • Shine Beautifully</p>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
